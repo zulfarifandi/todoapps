@@ -44,9 +44,6 @@ function App() {
   )
 }
 
-
-
-
 const styles = {
   container: {
     textAlign: 'center',
