@@ -11,5 +11,10 @@ const Todos = ({ todos }) => {
     </div>
   )
 }
-
+const styles = {
+  container: {
+    width: '40%',
+    margin: '0 auto',
+  },
+}
 export default Todos
