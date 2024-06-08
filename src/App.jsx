@@ -25,28 +25,14 @@ function App() {
 
   console.log(todos)
 
-  const toggleCompleted = (todoId) => {
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === todoId) {
-        todo.completed = !todo.completed
-      }
-      return todo
-    })
-    setTodos(updatedTodos)
-  }
-
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>My Todo List</h1>
-      {/* Teruskan function toggleCompleted ke component Todos */}
-      <Todos todos={todos} toggleCompleted={toggleCompleted} />
+    <div>
+      <h1>My Todo List</h1>
+
+      <Todos todos={todos} />
     </div>
   )
 }
-
-
-
-
 const styles = {
   container: {
     textAlign: 'center',
