@@ -33,5 +33,13 @@ function App() {
     </div>
   )
 }
-
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
+}
 export default App
