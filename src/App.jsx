@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Todos from './components/Todos'
 
@@ -25,6 +23,7 @@ function App() {
 
   console.log(todos)
 
+  // Fungsi untuk mengganti status completed dari todo
   const toggleCompleted = (todoId) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === todoId) {
@@ -35,15 +34,21 @@ function App() {
     setTodos(updatedTodos)
   }
 
+  // Fungsi untuk menghapus todo berdasarkan id
+  const deleteTodo = (id) => {
+    const filterDeleted = todos.filter((todo) => {
+      return todo.id !== id
+    })
+    setTodos(filterDeleted)
+  }
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
-      {/* Teruskan function toggleCompleted ke component Todos */}
-      <Todos todos={todos} toggleCompleted={toggleCompleted} />
+      <Todos todos={todos} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo} />
     </div>
   )
 }
- 
 
 const styles = {
   container: {
