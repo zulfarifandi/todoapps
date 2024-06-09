@@ -23,8 +23,8 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
       <button style={styles.button} onClick={() => deleteTodo(todo.id)}>x</button>
     </div>
   )
-}
 
+}
 const styles = {
   todoItem: {
     border: '2px solid #f4f4f4',
@@ -37,6 +37,7 @@ const styles = {
   checkbox: {
     height: '18px',
     width: '18px',
+
   },
   button: {
     backgroundColor: '#BB0000',

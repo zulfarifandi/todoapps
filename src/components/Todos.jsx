@@ -3,7 +3,7 @@ import TodoItem from './TodoItem' // Lakukan import
 
 const Todos = ({ todos, toggleCompleted, deleteTodo }) => {
   return (
-    <div style={styles.container}>
+    <div>
       {todos.map((todo) => {
         return (
           <TodoItem
