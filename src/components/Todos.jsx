@@ -1,16 +1,23 @@
 import React from 'react'
 import TodoItem from './TodoItem' // Lakukan import
 
-const Todos = ({ todos }) => {
+const Todos = ({ todos, toggleCompleted, deleteTodo }) => {
   return (
     <div>
       {todos.map((todo) => {
-        // Berikan datanya ke TodoItem
-        return <TodoItem key={todo.id} todo={todo} />
+        return (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            toggleCompleted={toggleCompleted}
+            deleteTodo={deleteTodo}
+          />
+        )
       })}
     </div>
   )
 }
+
 const styles = {
   container: {
     width: '40%',
